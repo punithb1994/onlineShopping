@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import productsData from '../data/products.json'
 import { useCartStore } from '../stores/cart'
 
 const route = useRoute()
@@ -9,10 +8,31 @@ const router = useRouter()
 const cartStore = useCartStore()
 
 const productId = route.params.id as string
+const productsData = ref<any[]>([])
+const isLoading = ref(true)
+
+// Load products data from public folder
+onMounted(async () => {
+  try {
+    // Use BASE_URL from vite config (./ for relative paths)
+    const jsonPath = `${import.meta.env.BASE_URL}products.json`
+    
+    const response = await fetch(jsonPath)
+    if (response.ok) {
+      productsData.value = await response.json()
+    } else {
+      console.error('Failed to fetch products.json:', response.status, response.statusText)
+    }
+  } catch (error) {
+    console.error('Failed to load products data:', error)
+  } finally {
+    isLoading.value = false
+  }
+})
 
 const product = computed(() => {
-  for (const category of productsData) {
-    const found = category.products.find(p => p.id === productId)
+  for (const category of productsData.value) {
+    const found = category.products.find((p: any) => p.id === productId)
     if (found) return found
   }
   return null
@@ -30,7 +50,10 @@ function goBack() {
 </script>
 
 <template>
-  <div class="product-detail-page container" v-if="product">
+  <div v-if="isLoading" class="container loading">
+    <p>Loading product...</p>
+  </div>
+  <div v-else-if="product" class="product-detail-page container">
     <button class="back-btn" @click="goBack">← Back to Products</button>
     
     <div class="product-layout">

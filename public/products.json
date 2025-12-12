@@ -1,0 +1,68 @@
+[
+    {
+        "id": "c1",
+        "title": "Digital Sorting",
+        "products": [
+            {
+                "id": "p1",
+                "name": "SORTEX A",
+                "type": "Optical Sorter",
+                "price": 25000,
+                "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=500&q=80",
+                "description": "The SORTEX A range delivers extraordinary performance for difficult sorting applications."
+            },
+            {
+                "id": "p2",
+                "name": "SORTEX B",
+                "type": "Optical Sorter",
+                "price": 18000,
+                "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=500&q=80",
+                "description": "Cost-effective sorting solution with high capacity and efficiency."
+            }
+        ]
+    },
+    {
+        "id": "c2",
+        "title": "Milling Solutions",
+        "products": [
+            {
+                "id": "p3",
+                "name": "Antares Roller Mill",
+                "type": "Grain Milling",
+                "price": 12500,
+                "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=500&q=80",
+                "description": "Consistent grinding with perfect sanitation standards."
+            },
+            {
+                "id": "p4",
+                "name": "Sirius Sifter",
+                "type": "Sifting",
+                "price": 8900,
+                "image": "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=500&q=80",
+                "description": "High-throughput sifter for varied industrial applications."
+            }
+        ]
+    },
+    {
+        "id": "c3",
+        "title": "Die Casting",
+        "products": [
+            {
+                "id": "p5",
+                "name": "Carat 140",
+                "type": "Die Casting",
+                "price": 45000,
+                "image": "https://images.unsplash.com/photo-1563291074-2bf8677ac0e5?auto=format&fit=crop&w=500&q=80",
+                "description": "Two-platen die-casting cells for structural components."
+            },
+            {
+                "id": "p6",
+                "name": "Ecoline S",
+                "type": "Die Casting",
+                "price": 32000,
+                "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=500&q=80",
+                "description": "Reliable and robust die-casting machine for standard components."
+            }
+        ]
+    }
+]
