@@ -1,6 +1,8 @@
 # onlineShopping
 Website for Online Shopping
 
+🔗 **Live Demo:** https://tackyant.com/additionals/onlineShopping/
+
 ## Project Setup
 
 ```sh
